@@ -178,7 +178,7 @@
       var csrfToken = document.querySelector('meta[name="csrf-token"]');
       var token     = csrfToken ? csrfToken.getAttribute('content') : '';
 
-      fetch('/api/ask.php', {
+      fetch('/whats_happening/api/ask.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
