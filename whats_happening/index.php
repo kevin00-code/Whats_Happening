@@ -85,7 +85,7 @@ $currentTime  = gmdate('H:i') . ' UTC';
 
 <!-- Hero Section -->
 <section class="hero" role="banner">
-  <p class="hero-eyebrow">&#x1F6A8; Live Coverage — <?= htmlspecialchars($currentDate, ENT_QUOTES, 'UTF-8') ?></p>
+  <p class="hero-eyebrow">&#x1F6A8; News Coverage — <?= htmlspecialchars($currentDate, ENT_QUOTES, 'UTF-8') ?></p>
   <h1 class="hero-title">
     The <span class="highlight">Iran War</span>:<br>
     What You Need to Know
