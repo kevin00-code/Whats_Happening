@@ -15,6 +15,7 @@ $currentTime  = gmdate('H:i') . ' UTC';
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="google-site-verification" content="aTU6WyC787HJDb9Qq0YfTtFQzmveAjPKSIlFZKxWcYU" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="csrf-token" content="<?= htmlspecialchars($csrfToken, ENT_QUOTES, 'UTF-8') ?>">
   <meta name="description" content="What's Happening — Verified, real-time news coverage of the ongoing US-Israel war on Iran. Sourced from Al Jazeera, Brookings, ISW, UN, and other credible outlets.">
@@ -28,7 +29,7 @@ $currentTime  = gmdate('H:i') . ' UTC';
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
-  <title>What's Happening — Iran War: Verified News Coverage</title>
+  <title>What's Happening — "Iran War": News Coverage</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
