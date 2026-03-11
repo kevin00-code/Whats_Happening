@@ -68,7 +68,7 @@ function checkRateLimit($action = 'general') {
         }
         // Reset window if expired
         if ($now - $row['last_attempt'] > RATE_WINDOW) {
-            $db->exec("UPDATE rate_limit SET attempts=1, last_attempt=$now, blocked_until=0 WHERE ip=" . $db->escapeString($key) . "'");
+            $db->exec("UPDATE rate_limit SET attempts=1, last_attempt=$now, blocked_until=0 WHERE ip='" . $db->escapeString($key) . "'");
             // use prepared statement below
             $upd = $db->prepare('UPDATE rate_limit SET attempts=1, last_attempt=:now, blocked_until=0 WHERE ip=:ip');
             $upd->bindValue(':now', $now, SQLITE3_INTEGER);
