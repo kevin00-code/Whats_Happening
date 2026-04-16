@@ -1,10 +1,6 @@
 <?php
-/**
- * What's Happening — Main Homepage
- * Verified news about the ongoing Iran conflict
- */
 
-require_once __DIR__ . '/includes/security.php';
+require_once(__DIR__ . '/includes/security.php');
 
 $csrfToken   = generateCSRFToken();
 $newsArticles = require __DIR__ . '/data/news.php';
