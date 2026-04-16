@@ -1,16 +1,18 @@
-==> Downloading cache...
-==> Cloning from https://github.com/kevin00-code/Whats_Happening
-==> Checking out commit d0846c19896e3150bc7677dd8182b7528e9b9820 in branch main
-==> Downloaded 190MB in 4s. Extraction took 1s.
-#1 [internal] load build definition from Dockerfile
-Menu
-#1 transferring dockerfile: 270B done
-#1 DONE 0.0s
-Dockerfile:2
---------------------
-   1 |     # 1. Copy your files
-   2 | >>> COPY . /var/www/html/
-   3 |     
-   4 |     # 2. Ensure the directory exists, then set permissions
---------------------
-error: failed to solve: no build stage in current context
+# 1. Start with the PHP + Apache base image
+FROM php:8.2-apache
+
+# 2. Install SQLite dependencies
+RUN apt-get update && apt-get install -y \
+    libsqlite3-dev \
+    && docker-php-ext-install pdo_sqlite
+
+# 3. Enable Apache mod_rewrite for .htaccess security rules
+RUN a2enmod rewrite
+
+# 4. Copy your project files into the container
+COPY . /var/www/html/
+
+# 5. Create directories and fix permissions for automation
+RUN mkdir -p /var/www/html/whats_happening/ && \
+    chown -R www-data:www-data /var/www/html/ && \
+    chmod -R 775 /var/www/html/data /var/www/html/logs
